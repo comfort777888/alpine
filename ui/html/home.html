@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII-ART</title> 
+    <link rel="icon" type="image/png" href="/static/favi.png">
+    <link rel='stylesheet' href='/static/style.css'> 
+</head>
+<body>
+
+        
+        <div class="container">
+            <div class="wrapper">          
+            <h1 class="caution">Welcome to the ASCII ART</h1>
+            <a href="https://en.wikipedia.org/wiki/ASCII_art" class="history"><button class="button">History of ASCII</button></a><br> <br> 
+            
+            <form method="POST" action="/ascii-art">
+                <div class="form-group">
+                <textarea rows="15"  type="text" class="form-control" id="textToForm" name="formtext"  placeholder="Type here: 
+Hello Alem" required ></textarea>
+                <div class="font_area">
+                    <input type="radio" id="Standard" name="fonts" value="Standard" checked>  <label for ="Standard">Standard</label>
+                    <input type="radio" id="Shadow" name="fonts" value="Shadow">  <label for ="Shadow">Shadow</label>
+                    <input type="radio" id="Thinkertoy" name="fonts" value="Thinkertoy">  <label for ="Thinkertoy">Thinkertoy</label>
+                </div> 
+                <input type="submit" value="Run" class="run">
+                </div>
+            </form> 
+            <br> 
+            <br> 
+            <br>
+        </div>
+        <div id="output">
+            <pre>{{.AsciiFont}}</pre>  
+        </div>
+     </div>
+            <br> <br>
+            <br>
+
+            <footer>
+                <nav>
+                    <a href="https://01.alem.school/git/M.a_k/ascii-art-web" class="home">HOME</a>
+                </nav>
+            </footer>
+
+</body>
+</html> 
